@@ -1,0 +1,51 @@
+<div class="container my-5">
+    <h1 class="mb-3">Kişileri Düzenle</h1>
+
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="uptadeEmployee()">
+               
+                
+                <div class="mb-3">
+                  <label for="İsim" class="form-label">İsim</label>
+                  <input type="text" class="form-control" id="İsim"  
+                  name="İsim" [(ngModel)]="employeeDetails.name">
+                </div>
+                <div class="mb-3">
+                    <label for="Soy İsim" class="form-label">Soy İsim</label>
+                    <input type="text" class="form-control" id="Soy İsim"  
+                    name="Soy İsim" [(ngModel)]="employeeDetails.surname">
+                  </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email"
+                    name="email" [(ngModel)]="employeeDetails.email">
+                </div>
+                <div class="mb-3">
+                    <label for="Numara" class="form-label">Numara</label>
+                    <input type="number" class="form-control" id="Numara"
+                    name="Numara" [(ngModel)]="employeeDetails.phone" >
+                </div>
+                <div class="mb-3">
+                    <label for="Maaş" class="form-label">Maaş</label>
+                    <input type="number" class="form-control" id="Maaş" 
+                    name="Maaş" [(ngModel)]="employeeDetails.salary">
+                </div>
+                <div class="mb-3">
+                    <label for="Çalıştığı Pozisyon" class="form-label">Çalıştığı Pozisyon</label>
+                    <input type="text" class="form-control" id="Çalıştığı Pozisyon" 
+                    name="Çalıştığı Pozisyon" [(ngModel)]="employeeDetails.department">
+                </div>         
+                <button type="submit" class="btn btn-primary mr-3">Kaydet</button>
+                <button mat-button color="warn" type="button" class="btn btn-danger " (click)="deleteEmployee(employeeDetails.id) ">Sil</button>
+                 
+                  
+              
+            </form>
+
+        </div>
+
+    </div>
+
+    
+</div>
